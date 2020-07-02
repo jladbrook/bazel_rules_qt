@@ -35,6 +35,7 @@ def qt_ui_library(name, ui, deps, **kwargs):
         name = name,
         hdrs = [":%s_uic" % name],
         deps = deps,
+        includes = ["."],
         **kwargs
     )
 
