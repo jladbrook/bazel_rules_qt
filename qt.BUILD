@@ -115,3 +115,15 @@ cc_library(
         "-lQt53DRender",
     ],
 )
+
+cc_library(
+    name = "qt_multimedia",
+    hdrs = glob(["QtMultimedia/**"]),
+    includes = ["."],
+    linkopts = [
+        "-lQt5Multimedia",
+    ],
+    deps = [
+        ":qt_network",
+    ],
+)
